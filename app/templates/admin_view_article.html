@@ -1,0 +1,26 @@
+<!-- app/templates/admin_view_article.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ver Artículo - Administrador</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Mi Blog Personal</h1>
+        <nav>
+          <a href="{{ url_for('admin.admin_dashboard') }}" class="btn">Volver al panel de administración</a>
+        </nav>
+      </header>
+
+  <main>
+    <article>
+      <h2>{{ article.title }}</h2>
+      <p><strong>Fecha:</strong> {{ article.date }}</p>
+      <hr>
+      <p>{{ article.content }}</p>
+    </article>
+  </main>
+</body>
+</html>

@@ -1,0 +1,332 @@
+/* app/static/css/styles.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #f7f7f7;
+}
+
+header {
+  background: #333;
+  color: #fff;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+header h1 {
+  display: inline-block;
+  margin: 0;
+}
+
+nav {
+  float: right;
+}
+
+nav a {
+  color: #fff;
+  margin-left: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: 1rem;
+}
+
+.articles-list ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.articles-list li {
+  margin-bottom: 0.5rem;
+}
+
+.date {
+  color: #666;
+  font-size: 0.9em;
+  margin-left: 0.5rem;
+}
+
+/* Paginación */
+.pagination {
+  margin-top: 1rem;
+}
+
+.pagination-buttons .btn {
+  display: inline-block;
+  margin-right: 1rem;
+  padding: 0.5rem 1rem;
+  background: #555;
+  color: #fff;
+  text-decoration: none;
+}
+
+.pagination-buttons .btn:hover {
+  background: #777;
+}
+
+
+/* Login */
+.login-container {
+  width: 350px;
+  margin: 80px auto;
+  background: #fff;
+  padding: 2rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h1 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 1.5rem;
+}
+
+.login-container label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.login-container button {
+  margin-top: 1.5rem;
+  width: 100%;
+  padding: 0.75rem;
+  background: #333;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.login-container button:hover {
+  background: #555;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/* Botón de regresar (en la parte superior derecha) */
+a.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+a.btn:hover {
+  background-color: #0056b3;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px; /* Espacio entre los botones */
+}
+
+button.btn-save, button.btn-back {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff; /* Color de fondo azul */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none; /* Elimina subrayado de los enlaces */
+  display: inline-block;
+  text-align: center;
+}
+
+button.btn-save:hover, button.btn-back:hover {
+  background-color: #0056b3; /* Color al pasar el ratón */
+}
+
+/* Agregamos un estilo para los botones individuales */
+button.btn-back {
+  background-color: #6c757d; /* Gris para el botón de "Volver" */
+}
+
+button.btn-back:hover {
+  background-color: #5a6268; /* Gris oscuro cuando se pasa el ratón */
+}
+
+button.btn-add, a.btn-add {  
+  padding: 10px 20px;  
+  font-size: 16px;  
+  background-color: #28a745; /* Verde brillante */  
+  color: white;  
+  border: none;  
+  border-radius: 5px;  
+  text-decoration: none;  
+  display: inline-block;  
+  text-align: center;  
+}
+
+button.btn-add:hover, a.btn-add:hover {  
+  background-color: #218838; /* Verde más oscuro cuando pasa el ratón */  
+}
+
+
+/* Centrar la palabra "Artículos" */
+.articles-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.article-title:hover {
+  text-decoration: underline;
+}
+
+/* Hacer el subtítulo más grande */
+.articles-subtitle {
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.article-info {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espacio entre el título y la fecha */
+}
+
+.article-item {
+  display: flex;
+  align-items: center; /* Alinea los elementos verticalmente */
+  gap: 10px; /* Espacio entre elementos */
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+/* Botón de los vínculos en la vista de invitados */
+.article-link {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.article-link:hover {
+  background-color: #444;
+  transform: scale(1.05);
+}
+
+/* Botón de los vínculos en la vista de administrador (azul) */
+.article-link-admin {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.article-link-admin:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Separar más los artículos */
+.articles-list ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.articles-list li {
+  margin-bottom: 20px;
+  padding: 10px 0;
+  border-bottom: none;
+}
+
+.articles-list li:last-child {
+  border-bottom: none;
+}
+
+/* Botones de administración */
+.admin-buttons {
+  display: flex;
+  gap: 5px; /* Espacio entre los botones */
+  align-items: center;
+}
+
+.date {
+  white-space: nowrap; /* Evita que la fecha se divida */
+  color: #666;
+  font-size: 0.9em;
+}
+
+.btn-edit {
+  padding: 8px 12px;
+  background-color: #ffc107;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.btn-edit:hover {
+  background-color: #e0a800;
+}
+
+.btn-delete {
+  padding: 8px 12px;
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-delete:hover {
+  background-color: #c82333;
+}
+
+
+/* Botón de Cerrar Sesión (Rojo) */
+.btn-logout {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #dc3545; /* Rojo */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn-logout:hover {
+  background-color: #c82333; /* Rojo más oscuro al pasar el ratón */
+  transform: scale(1.05); /* Efecto de escala al pasar el ratón */
+}

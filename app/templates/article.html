@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ article.title }}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+  <header>
+    <h1>Mi Blog Personal</h1>
+    <nav>
+      <!-- Botón para regresar a la página principal -->
+      <a class="btn" href="{{ url_for('articles.home') }}">Volver a la página principal</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="article-detail">
+      <h2>{{ article.title }}</h2>
+      <p><strong>{{ article.date }}</strong></p>
+      <p>{{ article.content }}</p>
+    </section>
+  </main>
+</body>
+</html>

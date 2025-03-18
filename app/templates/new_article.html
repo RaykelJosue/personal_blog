@@ -1,0 +1,34 @@
+<!-- app/templates/new_article.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Crear Nuevo Artículo</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+  <header>
+    <h1>Mi Blog Personal</h1>
+    <nav>
+      <a href="{{ url_for('admin.admin_dashboard') }}" class="btn">Volver al panel de administración</a>
+    </nav>
+  </header>
+
+  <main>
+    <p style="font-weight: bold;">Agregar un nuevo artículo</p>
+    <form method="POST">
+      <label for="title">Título:</label>
+      <input type="text" name="title" id="title" required>
+      <br><br>
+
+      <label for="content">Contenido:</label><br>
+      <textarea name="content" id="content" rows="6" cols="60" required></textarea>
+      <br><br>
+
+      <div class="buttons">
+      <button type="submit" class="btn-add">Publicar</button>
+      </div>
+    </form>
+  </main>
+</body>
+</html>

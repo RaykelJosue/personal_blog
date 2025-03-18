@@ -1,0 +1,54 @@
+<!-- app/templates/home.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Blog Personal</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+  <header>
+    <h1>Mi Blog Personal</h1>
+    <nav>
+      <a href="{{ url_for('auth.login') }}" class="btn-add">Iniciar Sesión</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="articles-list">
+      <h2 class="articles-title">Artículos</h2>
+      <p class="articles-subtitle">Selecciona un artículo para ver el contenido:</p>
+      <ul>
+        {% for article in articles %}
+        <li>
+          <a href="{{ url_for('articles.article', article_id=article.id) }}" class="article-link">
+            {{ article.title }}
+          </a>
+          <span class="date">({{ article.date }})</span>
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+    
+
+    <!-- Bloque de Paginación -->
+    <section class="pagination">
+      {% if total_articles == 0 %}
+        <p>No hay artículos publicados.</p>
+      {% else %}
+        <div class="pagination-buttons">
+          <!-- Botón de Anterior -->
+          {% if page > 1 %}
+            <a class="btn" href="{{ url_for('articles.home', page=page-1) }}">Anterior</a>
+          {% endif %}
+
+          <!-- Botón de Siguiente -->
+          {% if page < total_pages %}
+            <a class="btn" href="{{ url_for('articles.home', page=page+1) }}">Siguiente</a>
+          {% endif %}
+        </div>
+      {% endif %}
+    </section>
+  </main>
+</body>
+</html>

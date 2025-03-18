@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Editar Artículo</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+  <header>
+    <h1>Mi Blog Personal</h1>
+    <nav>
+      <a href="{{ url_for('admin.admin_dashboard') }}" class="btn">Volver al panel de administración</a>
+    </nav>
+  </header>
+
+  <main>
+    <p style="font-weight: bold;">Editar artículo</p>
+    <form action="{{ url_for('admin.edit_article', article_id=article['id']) }}" method="POST">
+      <label for="title">Título:</label>
+      <input type="text" id="title" name="title" value="{{ article['title'] }}" required><br><br>
+
+      <label for="content">Contenido:</label><br>
+      <textarea id="content" name="content" rows="10" cols="50" required>{{ article['content'] }}</textarea><br><br>
+
+      <div class="buttons">
+        <button type="submit" class="btn-save">Guardar cambios</button>
+        <button type="button" onclick="history.back()" class="btn-back">Volver</button>
+      </div>
+    </form>
+  </main>
+</body>
+</html>
